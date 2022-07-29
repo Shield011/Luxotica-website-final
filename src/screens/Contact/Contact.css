@@ -1,0 +1,279 @@
+.contact-heading {
+    background-color: rgb(71, 71, 71);
+    
+    padding: 30px;
+    text-align: left;
+
+}
+
+.contact-heading-text{
+    margin-left: 120px;
+    font-size: 30px;
+    color: #F6E6A3;
+    font-weight: 1000;
+}
+
+.contact-navigation{
+    background-color: aliceblue;
+    padding: 15px;
+   
+}
+.navigation-row{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 135px;
+}
+
+.contact-us-main-image-container{
+    margin-bottom: 20px;
+}
+.contact-us-main-image{
+    height: 300px;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.contact-us-information-section{
+    color: white;
+    padding: 40px 100px 40px 100px;
+    display: flex;
+    text-align: left;
+}
+
+.contact-form-container{
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 1000px;
+}
+
+.contact-us-form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.contact-form-title{
+    margin-bottom: 0px;
+    padding-left: 20px;
+    font-size: 25px;
+    border-left: 4px solid #F6E6A3;
+    color: #F6E6A3;
+    letter-spacing: 1px;
+}
+
+.contact-horizontal-line{
+    color: #ffe88b;
+    width: 90%;
+}
+
+.contact-form-info{
+    margin-top: 10px;
+    padding: 3px;
+
+
+}
+.contact-form-input{
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 35px;
+    border: 1px solid #F6E6A3;
+    background-color: transparent;
+    color: white;
+    
+
+}
+
+.contact-form-input.long{
+    height: 200px;
+    
+}
+.contact-us-address{
+    padding: 20px 10px 20px 10px;
+    text-align: left;
+
+
+    
+}
+.opening-hours-details{
+    margin-top: 33px;
+    margin-bottom: 40px;
+    background-color: #F6E6A3;
+    padding: 15px;
+
+    color: black ;
+    border-radius: 20px;
+   
+}
+
+.opening-heading, .Reach-us{
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    
+    
+}
+.opening-heading{
+    margin-bottom: 0px;
+}
+
+.opening-timings{
+    margin: 0px;
+    margin-top: -10px;
+    margin-bottom: -20px;
+}
+
+.contact-us-call-information{
+    margin-top: 33px;
+    margin-bottom: 40px;
+    background-color: #F6E6A3;
+    padding: 15px;
+    padding-bottom: 25px;
+    color: black ;
+    border-radius: 20px;
+
+}
+
+.reach-us-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 10px;
+    
+}
+
+.email-detail, .phone-detail, .address-detail{
+    margin: 0;
+}
+
+.phone-detail-2{
+    width: 100%;
+    margin-left: 93px;
+    margin-bottom: 0px;
+}
+   
+.address-detail{
+    margin-left: 20px;
+}
+.contact-phone-icon, .contact-address-icon, .contact-mail-icon{
+    font-size: 20px;
+}
+
+.address, .phone, .email{
+    font-weight: bolder;
+}
+
+.contact-horizontal-line.contact{
+    color: black;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-submit-button{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    padding-left: 17px;
+    gap: 17px;
+    background-color: #F6E6A3;
+    width: 130px;
+   
+    border-radius: 25px;
+    color: black;
+}
+
+.form-submit-icon{
+   
+    padding: 9px 13px 9px 13px;
+    border-radius: 50%;
+    color: #F6E6A3;
+    background-color: black;
+}
+
+.form-submit-button:hover{
+    background-color: transparent;
+    border: 1px solid #F6E6A3;
+    color: #F6E6A3;
+
+}
+
+@media screen and (max-width:950px){
+
+    .contact-us-information-section{
+        
+        padding: 20px 50px 20px 50px;
+        
+    }
+
+}
+
+@media screen and (max-width:750px){
+    
+    .contact-us-information-section{
+        
+        padding: 20px 30px 20px 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    
+    
+    }
+
+    .contact-form-container{
+        width: 100%;
+    }
+
+    .contact-us-form{
+        width: 95%;
+    }
+    .contact-heading-text{
+        margin-left: 0px;
+    }
+    .navigation-row{
+        margin-left: 20px;
+    }
+
+
+}
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2){
+
+    .contact-us-information-section{
+        
+        padding: 20px 10px 20px 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    
+    
+    }
+
+    .contact-form-container{
+        width: 100%;
+        padding: 5px;
+    }
+
+    .contact-us-form{
+        width: 98%;
+    }
+
+    .contact-us-address{
+        padding: 5px;
+    }
+    .contact-heading-text{
+        margin-left: 0px;
+    }
+    .navigation-row{
+        margin-left: 20px;
+    }
+
+    
+
+  }

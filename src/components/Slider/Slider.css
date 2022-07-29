@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.slider-caption{
+  color: #F6E6A3;
+  position: absolute;
+  top: -260px;
+  left: 16px;
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif;
+
+
+
+}
+.add-caption {
+  text-transform: uppercase;
+  position: absolute;
+  top: -290px;
+  left: 20px;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #F6E6A3;
+  border-right: 5px solid black;
+  border-left: 5px solid black;
+  padding: 5px;
+  
+
+}
+
+.slider-desc{
+  color: #F6E6A3;
+  position: absolute;
+  top: -215px;
+  left: 16px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #F6E6A3 !important;
+  margin-bottom: 0 !important;
+}
+
+.carousel-indicators{
+  z-index: 0 !important;
+
+}
+
+.carousel-control-next, .carousel-control-prev{
+  z-index: 0 !important;
+}
