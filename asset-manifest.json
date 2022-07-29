@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.778586cb.css",
+    "main.js": "/static/js/main.ccf41575.js",
+    "static/media/Huracan.png": "/static/media/Huracan.f7fc482d7ad58e3d1608.png",
+    "static/media/RollsRoyceRight.png": "/static/media/RollsRoyceRight.b8dda8e273b714a18425.png",
+    "static/media/MercedesBenzE.png": "/static/media/MercedesBenzE.cc3ba4680bee8413fca7.png",
+    "static/media/phoneTalking.jpg": "/static/media/phoneTalking.a1b195485ef53a2665bb.jpg",
+    "static/media/MiniCooperRed.png": "/static/media/MiniCooperRed.81cb1ea497bdbb369217.png",
+    "static/media/carDelivery.jpg": "/static/media/carDelivery.ead3e3064aad3d829941.jpg",
+    "static/media/carHandover.jpg": "/static/media/carHandover.7111b9a1b77fdea6aa8b.jpg",
+    "static/media/LuxoticaLogo.png": "/static/media/LuxoticaLogo.1ab8d6bec5f263ed78ee.png",
+    "static/media/visitingShowroom.jpg": "/static/media/visitingShowroom.5bd1c7df916b9e53d351.jpg",
+    "index.html": "/index.html",
+    "main.778586cb.css.map": "/static/css/main.778586cb.css.map",
+    "main.ccf41575.js.map": "/static/js/main.ccf41575.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.778586cb.css",
+    "static/js/main.ccf41575.js"
+  ]
+}
