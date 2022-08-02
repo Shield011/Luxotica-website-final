@@ -64,7 +64,7 @@ const About = () => {
                             <div className='offer-texts'>
                                 <p className="offer-text-one">We offer</p>
                                 <p className="offer-text-two">Low Prices, No Haggling</p>
-                            
+
 
                             <hr className="offer-horizontal-line" />
                             <p className="offer-text-three">
@@ -79,12 +79,12 @@ const About = () => {
                             <div className='offer-texts'>
                                 <p className="offer-text-one">We are the</p>
                                 <p className="offer-text-two">Largest Car Dealership</p>
-                                                     
+
                              <hr className="offer-horizontal-line" />
                             <p className="offer-text-three">
                                 Curabitur libero. Donec facilisis velit eu est. Phasellus cons quat. Aenean vitae quam. Vivamus et nunc. Nunc consequ sem velde metus imperdiet lacinia.
                             </p>
-                            </div> 
+                            </div>
 
 
                         </div>
@@ -93,12 +93,12 @@ const About = () => {
                             <div className='offer-texts'>
                                 <p className="offer-text-one">Our customer Get</p>
                                 <p className="offer-text-two">Multipoint Safety Check</p>
-                                                     
+
                             <hr className="offer-horizontal-line" />
                             <p className="offer-text-three">
                                 Curabitur libero. Donec facilisis velit eu est. Phasellus cons quat. Aenean vitae quam. Vivamus et nunc. Nunc consequ sem velde metus imperdiet lacinia.
                             </p>
-                            </div>  
+                            </div>
 
 
                         </div>
@@ -116,7 +116,7 @@ const About = () => {
                         <p className = "choose-us-reasons">
                         Curabitur libero. Donec facilisis velit eu est. Phasellus cons quat. Aenean vitae quam. Vivamus etyd nunc. Nunc consequsem velde metus imperdiet lacinia. Lorem ipsum dolor sit amet sed consectetur adipisicing elit sed do eiusmod.
                         </p>
-                        
+
                         <div className = "bullet-points-section">
                             <div className = "bullet-points-container">
                                 <FontAwesomeIcon icon = {faAnglesRight} className = 'bullet-icon'/>
@@ -124,7 +124,7 @@ const About = () => {
                                     Lorem Ipsum blaah blaah blaah
                                 </p>
 
-                                
+
                             </div>
                             <div className = "bullet-points-container">
                                 <FontAwesomeIcon icon = {faAnglesRight} className = 'bullet-icon'/>
@@ -132,7 +132,7 @@ const About = () => {
                                     Lorem Ipsum blaah blaah blaah
                                 </p>
 
-                                
+
                             </div>
                             <div className = "bullet-points-container">
                                 <FontAwesomeIcon icon = {faAnglesRight} className = 'bullet-icon'/>
@@ -140,7 +140,7 @@ const About = () => {
                                     Lorem Ipsum blaah blaah blaah
                                 </p>
 
-                                
+
                             </div>
                             <div className = "bullet-points-container">
                                 <FontAwesomeIcon icon = {faAnglesRight} className = 'bullet-icon'/>
@@ -148,7 +148,7 @@ const About = () => {
                                     Lorem Ipsum blaah blaah blaah
                                 </p>
 
-                                
+
                             </div>
                             <div className = "bullet-points-container">
                                 <FontAwesomeIcon icon = {faAnglesRight} className = 'bullet-icon'/>
@@ -156,7 +156,7 @@ const About = () => {
                                     Lorem Ipsum blaah blaah blaah
                                 </p>
 
-                                
+
                             </div>
 
                         </div>
@@ -167,7 +167,7 @@ const About = () => {
                     <p className = "more-info-text">
                            More Info
                         </p>
-                        <div clasName = "more-info-section-bullet-container">
+                        <div className = "more-info-section-bullet-container">
                             <div className='more-info-section-bullet'>
                                 <p className='more-info-section-bullet-point'>
                                 Lorem Ipsum blaah blaah blaah
@@ -209,7 +209,7 @@ const About = () => {
                     </p>
                     </div>
 
-                    
+
                 </div>
                 <div className = "who-are-we-alternate">
                 <div className='partner-image-container'>
@@ -220,13 +220,13 @@ const About = () => {
                     <h3 className='partners-name'>Pratap Bhanu Singh</h3>
                     <p className = 'partners-desc'>
                     Luxotica is the brainchild of our founder Mr. Pratap Bhanu Singh, a passionate automobile enthusiast since his early days. Having joined the industry at 18, he has worked with the best of the brands out there. The likes of Mitsubishi, BMW, Audi, Mercedes Benz, Porsche and Aston Martin have been his playground.
-                    
+
 The dream of being able to provide a one of a kind consumer experience has been a constant motivation for us all these years. That, and all the love and support of our well wishers made it possible. It was the year 2019, when after 15 years of dedicated experience in the industry, this dream came to fruition.
 Since its inception, Luxotica has strived to provide clients with the best deals in automobiles, with singular focus on "Quality, Clarity and, Integrity."
                     </p>
                     </div>
 
-                    
+
                 </div>
                 <div className = "who-are-we">
                 <div className='partner-image-container'>
@@ -241,10 +241,10 @@ Since its inception, Luxotica has strived to provide clients with the best deals
                     </p>
                     </div>
 
-                    
+
                 </div>
                 </div>
-                
+
 
             </div>
             <Footer />
