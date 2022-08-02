@@ -1,3 +1,4 @@
+import React from "react";
 import { Route, Routes} from "react-router-dom";
 import './App.css';
 import Home from './screens/HomePage/Home';
@@ -7,10 +8,16 @@ import About from './screens/About/About';
 import Contact from './screens/Contact/Contact';
 import Navbar from "./components/Navbar/Navbar";
 
+
+
+
+
 function App() {
   return (
+
     <div className="App">
       {/* <Home /> */}
+
       <Routes>
       <Route exact path='/' element={<Home/>} />
       <Route path='/cars' element={<Cars />} />

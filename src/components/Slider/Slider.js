@@ -4,18 +4,22 @@ import RollsRoyceRight from "../../assests/images/RollsRoyceRight.png";
 import MiniCooperRed from "../../assests/images/MiniCooperRed.png";
 import MercedesBenzE from "../../assests/images/MercedesBenzE.png";
 import Huracan from "../../assests/images/Huracan.png";
+import BlackImage from "../../assests/images/BlackImage.jpg";
+import Unsplash1 from "../../assests/images/Unsplash1.jpg";
+import Unsplash2 from "../../assests/images/Unsplash2.jpg";
+import Unsplash3 from "../../assests/images/Unsplash3.jpg";
 import './Slider.css';
 
 
 function Slider() {
     return (
         <div className = "slider">
-           
+
         <Carousel pause = {true}>
             <Carousel.Item interval={3000}>
                 <img
                     className="d-block w-100"
-                    src={RollsRoyceRight}
+                    src={Unsplash1}
                     alt="First slide"
                 />
                 <Carousel.Caption>
@@ -26,8 +30,8 @@ function Slider() {
             </Carousel.Item>
             <Carousel.Item interval={3000}>
                 <img
-                    className="d-block w-100"
-                    src={MiniCooperRed}
+                    className="w-100"
+                    src={Unsplash1}
                     alt="Third slide"
                 />
                 <Carousel.Caption>
@@ -38,8 +42,8 @@ function Slider() {
             </Carousel.Item>
             <Carousel.Item interval={3000}>
                 <img
-                    className="d-block w-100"
-                    src={Huracan}
+                    className="w-100"
+                    src={Unsplash1}
                     alt="Third slide"
                 />
                 <Carousel.Caption>
@@ -51,8 +55,8 @@ function Slider() {
 
             <Carousel.Item interval={3000}>
                 <img
-                    className="d-block w-100"
-                    src={MercedesBenzE}
+                    className="w-100"
+                    src={Unsplash1}
                     alt="Third slide"
                 />
                 <Carousel.Caption>
