@@ -12,7 +12,7 @@ import Footer from "../../components/Footer/Footer";
 
 const Contact = (e) => {
     e.preventDefault();
-    1
+
     const[name, setName] = useState();
     const[email, setEmail] = useState();
     const[phone, setPhone] = useState();
