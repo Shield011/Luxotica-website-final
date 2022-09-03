@@ -120,14 +120,16 @@ const About = () => {
                                 Why Choose Us
                             </p>
                             <p className="choose-us-reasons">
-                                Curabitur libero. Donec facilisis velit eu est. Phasellus cons quat. Aenean vitae quam. Vivamus etyd nunc. Nunc consequsem velde metus imperdiet lacinia. Lorem ipsum dolor sit amet sed consectetur adipisicing elit sed do eiusmod.
+                            Well, let's see
                             </p>
 
                             <div className="bullet-points-section">
                                 <div className="bullet-points-container">
                                     <FontAwesomeIcon icon={faAnglesRight} className='bullet-icon' />
                                     <p className='bullet-point'>
-                                        Lorem Ipsum blaah blaah blaah
+                                    We offer you best in class customised deals
+
+
                                     </p>
 
 
@@ -135,7 +137,8 @@ const About = () => {
                                 <div className="bullet-points-container">
                                     <FontAwesomeIcon icon={faAnglesRight} className='bullet-icon' />
                                     <p className='bullet-point'>
-                                        Lorem Ipsum blaah blaah blaah
+                                    World class after sales support and connect
+
                                     </p>
 
 
@@ -143,7 +146,8 @@ const About = () => {
                                 <div className="bullet-points-container">
                                     <FontAwesomeIcon icon={faAnglesRight} className='bullet-icon' />
                                     <p className='bullet-point'>
-                                        Lorem Ipsum blaah blaah blaah
+                                    Door step automotive solutions
+
                                     </p>
 
 
@@ -151,7 +155,8 @@ const About = () => {
                                 <div className="bullet-points-container">
                                     <FontAwesomeIcon icon={faAnglesRight} className='bullet-icon' />
                                     <p className='bullet-point'>
-                                        Lorem Ipsum blaah blaah blaah
+                                     All your favourite brands under one roof
+
                                     </p>
 
 
@@ -159,11 +164,15 @@ const About = () => {
                                 <div className="bullet-points-container">
                                     <FontAwesomeIcon icon={faAnglesRight} className='bullet-icon' />
                                     <p className='bullet-point'>
-                                        Lorem Ipsum blaah blaah blaah
+                                    Fair and transparent practices
                                     </p>
 
 
                                 </div>
+                                <br />
+                                <p className="choose-us-reasons">
+                                But you won't know until you come, experience it for yourself.
+Visit us today to make your luxury automobile dreams true, only at Luxotica!                            </p>
 
                             </div>
 

@@ -61,6 +61,7 @@ body {
   display: none;
 }
 
+
 .buttons{
   display: flex;
     flex-direction: row;
@@ -77,11 +78,13 @@ body {
   font-weight: bold;
   font-size: 16px;
   border-radius: 20px;
+  font-weight: normal;
 }
 
 .account:hover{
-  background-color: #484848;
+  background-color: transparent;
   color: #F6E6A3;
+  border: 1px solid #F6E6A3;
 }
 
 .account:active{
@@ -174,16 +177,42 @@ body {
     display: block;
     color: #F6E6A3;
     position: absolute;
-    top: -10px;
+    top: 12px;
     right:0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+    cursor: pointer;
+    /* padding: 10px; */
+    border-radius: 50%;
+    transition: all 0.2s ease;
+  }
 
+  .menu-icon:active{
+    animation: circle-anim 0.3s ease forwards;
+    transition: all 0.4s ease;
+    background-color: #ebe5cd;
+    color: black;
   }
-  .menu-icon:hover {
+  @keyframes circle-anim{
+    0% {
+
+    }
+
+    90%{
+      padding: 0.35em;
+      margin: -0.35em;
+    }
+
+    100%{
+      padding: 0.25em;
+      margin: -0.25em;
+    }
+  }
+
+  /* .menu-icon:hover {
     color: #ffdb49;
-  }
+  } */
 
 
 

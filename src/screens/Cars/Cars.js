@@ -1,46 +1,41 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 import { useState } from "react";
 import { carData } from "./CarData";
 import Navbar from "../../components/Navbar/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faAngleRight,
-    faList,
-    faTableCells,
-    faCaretDown,
-    faCarSide,
-    faCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import { GiSpeedometer } from "react-icons/gi";
+import {FaFilter} from 'react-icons/fa';
+import {BiSort} from 'react-icons/bi';
+import {FiFilter} from 'react-icons/fi';
+import {MdTableRows, MdTableChart} from 'react-icons/md';
 import "./Cars.css";
+import { Dropdown } from "semantic-ui-react";
+
 import Footer from "../../components/Footer/Footer";
 
 const Cars = () => {
     const [itemNumber, setItemNumber] = useState();
-    const [sortValue, setSortValue] = useState();
-    const [isSortDropdown, setIsSortDropdown] = useState(false);
-    const [isActiveManufacturer, setIsActiveManufacturer] = useState(false);
-    const [isActiveModel, setIsActiveModel] = useState(false);
-    const [isActiveStatus, setIsActiveStatus] = useState(false);
-    const [isActiveMax, setIsActiveMax] = useState(false);
-    const [isActiveMin, setIsActiveMin] = useState(false);
-    const [selected, setSelected] = useState("Choose One");
-    const [selectedManufacturer, setSelectedManufacturer] =
-        useState("Any Manufacturer");
-    const [selectedModel, setSelectedModel] = useState("Any Model");
-    const [selectedStatus, setSelectedStatus] = useState("Vehicle Status");
-    const [selectedMax, setSelectedMax] = useState("Max Year");
-    const [selectedMin, setSelectedMin] = useState("Min Year");
 
-    const[isGrid, setIsGrid] = useState(false);
+    const [isGrid, setIsGrid] = useState(false);
+    const [minPrice, setMinPrice] = useState();
+    const [maxPrice, setMaxPrice] = useState();
+
 
     const handleClickGrid = () => {
         setIsGrid(true);
-    }
+    };
     const handleClickTable = () => {
         setIsGrid(false);
-    }
-
+    };
+    const options = [
+        { key: 1, text: "Choice 1", value: 1 },
+        { key: 2, text: "Choice 2", value: 2 },
+        { key: 3, text: "Choice 3", value: 3 },
+    ];
     const sortOption = [
         "Recently Added",
         "Recently Added",
@@ -61,35 +56,41 @@ const Cars = () => {
         "Audi",
     ];
 
+    const navigate = useNavigate();
+
     return (
         <div>
             <Navbar />
-            <div className="car-heading">
-                <div className="cars-heading">
-                    <h1 className="car-heading-text">Cars</h1>
-                </div>
-            </div>
             <div className="car-navigation">
-                <div className="navigation-row">
-                    <a className="nav-text" href="/">
+                <div className="navigation-row-cars">
+                    <a className="nav-text-cars" href="/">
                         Home
                     </a>
                     <FontAwesomeIcon icon={faAngleRight} className="nav-icon" />
-                    <a className="nav-text" href="/cars">
+                    <a className="nav-text-cars" href="/cars">
                         Cars
                     </a>
                 </div>
             </div>
+
             <div className="car-page-view-control-container">
+            <div className="car-heading">
+                <div className="cars-heading">
+                    <h1 className="car-heading-text">Total 100 Cars Found</h1>
+                </div>
+            </div>
                 <div className="car-page-view-control">
                     <div className="section">
-                        <p className="section-text">Select view</p>
+                        <p className="section-text mobile">Select view</p>
                         <div className="view-buttons-section">
-                            <FontAwesomeIcon icon={faList} className="list-view-icon" onClick = {handleClickTable} />
+                            <MdTableRows
+                                className="list-view-icon"
+                                onClick={handleClickTable}
+                            />
 
-                            <FontAwesomeIcon
-                                icon={faTableCells}
-                                className="table-view-icon" onClick={handleClickGrid}
+                            <MdTableChart
+                                className="table-view-icon"
+                                onClick={handleClickGrid}
                             />
                         </div>
                     </div>
@@ -106,87 +107,98 @@ const Cars = () => {
 
                     <div className="section">
                         <p className="section-text">Sort</p>
-                        <div
-                            className="sort-dropdown-btn"
-                            onClick={(e) => setIsSortDropdown(!isSortDropdown)}
-                        >
-                            {sortValue}
-                            <FontAwesomeIcon icon={faCaretDown} className="angle-down-icon" />
-                        </div>
-                        {isSortDropdown && (
-                            <div className="sort-dropdown-content">
-                                {sortOption.map((sort, index) => {
-                                    return (
-                                        <div
-                                            className="sort-dropdown-item"
-                                            key={index}
-                                            onClick={(e) => {
-                                                setSortValue(sort);
-                                                setIsSortDropdown(false);
-                                            }}
-                                        >
-                                            {sort}
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        )}
+                        <Dropdown className = 'sort-dropdown'
+                                    placeholder="Sort By"
+                                    clearable
+                                    options={options}
+                                    selection
+                                />
+                    </div>
+                    <div className = 'mobile-icon'>
+                        <BiSort className = 'sort' />
+                    </div>
+                    <div className = 'mobile-icon'>
+                    <FiFilter className = 'car-page-filter' />
+
                     </div>
                 </div>
+
             </div>
+            <hr  className="car-hr"/>
 
             <div className="listing-container">
-                <div className="listing">
-                    <div className={isGrid ? 'car-listing  grid' : 'car-listing '}>
+                <div className={isGrid? "listing grid" : "listing mobile"}>
+                    <div className={isGrid ? "car-listing  grid" : "car-listing mobile"}>
                         {carData.map((car, index) => {
                             return (
                                 <div className="car-section grid">
-
-                                    <div className= {isGrid ? 'car-details grid' : 'car-details'}>
+                                    <div className={isGrid ? "car-details grid" : "car-details mobile"}>
                                         <div className="car-image-section">
-                                            <span className="car-status">{car.status}</span>
-                                            <img src={car.image} alt={car.name} className= {isGrid ? 'car-img grid': 'car-img'} />
+                                            <span className={isGrid ? "car-status grid": "car-status mobile"}>{car.status}</span>
+
+                                            <img
+                                            src={car.image1}
+                                            alt={car.name}
+                                            className={isGrid ? "car-img grid" : "car-img mobile"}
+                                        />
+
                                         </div>
-                                        <div className="car-info">
+                                        <div className={isGrid? 'car-info grid' : 'car-info mobile'}>
                                             <div className="car-price-row">
-                                                <p className={isGrid ? 'car-name grid': 'car-name'}>{car.name}</p>
-                                                <hr className="car-hr" />
+                                                <p className={isGrid ? "car-name grid" : "car-name mobile"}>
+                                                    {car.name}
+                                                </p>
+
                                             </div>
+                                            <hr className="car-hr" />
 
-                                            <div className={isGrid ? 'car-info-row grid' :'car-info-row'}>
-                                                <div className= {isGrid ? 'car-info-detail grid' :'car-info-detail'}>
-
+                                            <div
+                                                className={
+                                                    isGrid ? "car-info-row grid" : "car-info-row mobile"
+                                                }
+                                            >
+                                                <div
+                                                    className={
+                                                        isGrid ? "car-info-detail grid" : "car-info-detail mobile"
+                                                    }
+                                                >
                                                     <p className="car-desc">{car.desc}</p>
 
-                                                    <div className= {isGrid ? 'car-specs grid' : 'car-specs' }>
-                                                        <div className="specs">
-                                                            <div className="specs-detail">
+                                                    <div
+                                                        className={isGrid ? "car-specs grid" : "car-specs mobile"}
+                                                    >
+                                                        <div className="specs mobile">
+                                                            <div className="specs-detail mobile-display">
                                                                 <span className="specs-name">Body style:</span>
                                                                 <span className="specs-info">
                                                                     {car.bodyStyle}
                                                                 </span>
                                                             </div>
-                                                            <div className="specs-detail">
+                                                            <div className={isGrid? "specs-detail grid": "specs-detail mobile"}>
                                                                 <span className="specs-name">Mileage:</span>
-                                                                <span className="specs-info">{car.mileage}</span>
+                                                                <span className="specs-info">
+                                                                    {car.mileage}
+                                                                </span>
                                                             </div>
-                                                            <div className="specs-detail">
-                                                                <span className="specs-name">Transmission:</span>
+                                                            <div className={isGrid? "specs-detail grid": "specs-detail mobile"}>
+                                                                <span className="specs-name">
+                                                                    Transmission:
+                                                                </span>
                                                                 <span className="specs-info">
                                                                     {car.transmission}
                                                                 </span>
                                                             </div>
                                                         </div>
-                                                        <div className="specs">
-                                                            <div className="specs-detail">
+                                                        <div className="specs mobile">
+                                                            <div className="specs-detail mobile-display">
                                                                 <span className="specs-name">Engine:</span>
                                                                 <span className="specs-info">{car.engine}</span>
                                                             </div>
-                                                            <div className="specs-detail">
+                                                            <div className="specs-detail mobile-display">
                                                                 <span className="specs-name">color:</span>
                                                                 <span className="specs-info">{car.color}</span>
                                                             </div>
-                                                            <div className="specs-detail">
+                                                            <div className={isGrid? "specs-detail grid": "specs-detail mobile"}>
                                                                 <span className="specs-name">Specs:</span>
                                                                 <span className="specs-info">{car.specs}</span>
                                                             </div>
@@ -194,22 +206,28 @@ const Cars = () => {
                                                     </div>
                                                 </div>
                                                 <div className="car-info-detail-2">
-
-                                                    <div className={isGrid ?  'specs-2 grid': 'specs-2'}>
-                                                        <div className = {isGrid? 'car-price-row-2 grid' : 'car-price-row-2'}>
-                                                        <span className = 'specs-name-2'>
-                                                            Price:
-                                                        </span>
-                                                        <p className="car-price">{car.price}</p>
+                                                    <div className={isGrid ? "specs-2 grid" : "specs-2 mobile"}>
+                                                        <div
+                                                            className={
+                                                                isGrid
+                                                                    ? "car-price-row-2 grid"
+                                                                    : "car-price-row-2 mobile"
+                                                            }
+                                                        >
+                                                            <span className="specs-name-2">Price:</span>
+                                                            <p className="car-price">{car.price}</p>
                                                         </div>
-                                                        <div className="view-details-button">
+                                                        {/* <Link to= {{pathname: '/carDetails',
+                                                        state: {car}}}
+                                                        > */}
+                                                        <div className="view-details-button" onClick ={() => navigate('/carDetails', { state : { query : {car} }})}>
                                                             View details
                                                             <FontAwesomeIcon
                                                                 icon={faAngleRight}
                                                                 className="details-icon"
                                                             />
                                                         </div>
-
+                                                        {/* </Link> */}
                                                     </div>
                                                 </div>
                                             </div>
@@ -219,177 +237,71 @@ const Cars = () => {
                             );
                         })}
                     </div>
-                    <div className={isGrid ? "car-filter grid" : "car-filter"}>
+                    <div className={isGrid ? "car-filter grid " : "car-filter mobile"}>
                         <span className="car-filter-title">Refine your Search</span>
                         <div className="car-filter-sections">
-                            <div className="car-filter-by-dropdown">
-                                <div className="car-dropdown">
-                                    <div
-                                        className="car-dropdown-btn"
-                                        onClick={(e) =>
-                                            setIsActiveManufacturer(!isActiveManufacturer)
-                                        }
-                                    >
-                                        {selectedManufacturer}
-                                        <FontAwesomeIcon
-                                            icon={faCaretDown}
-                                            className="angle-down-icon"
-                                        />
-                                    </div>
-                                    {isActiveManufacturer && (
-                                        <div className="car-dropdown-content">
-                                            {carModels.map((model, index) => {
-                                                return (
-                                                    <div
-                                                        className="car-dropdown-item"
-                                                        key={index}
-                                                        onClick={(e) => {
-                                                            setSelectedManufacturer(model);
-                                                            setIsActiveManufacturer(false);
-                                                        }}
-                                                    >
-                                                        {model}
-                                                    </div>
-                                                );
-                                            })}
-                                        </div>
-                                    )}
-                                </div>
-                                <p className="car-select-desc">MISSING MANUFACTURER?</p>
+                            <div className="dropdown">
+                                <p className="select-desc">Select Manufacturer</p>
+                                <Dropdown
+                                    placeholder="Manufacturer"
+                                    clearable
+                                    options={options}
+                                    selection
+                                />
                             </div>
 
-                            <div className="car-filter-by-dropdown">
-                                <div className="car-dropdown">
-                                    <div
-                                        className="car-dropdown-btn"
-                                        onClick={(e) => setIsActiveModel(!isActiveModel)}
-                                    >
-                                        {selectedModel}
-                                        <FontAwesomeIcon
-                                            icon={faCaretDown}
-                                            className="angle-down-icon"
-                                        />
-                                    </div>
-                                    {isActiveModel && (
-                                        <div className="car-dropdown-content">
-                                            {carModels.map((model, index) => {
-                                                return (
-                                                    <div
-                                                        className="car-dropdown-item"
-                                                        key={index}
-                                                        onClick={(e) => {
-                                                            setSelectedModel(model);
-                                                            setIsActiveModel(false);
-                                                        }}
-                                                    >
-                                                        {model}
-                                                    </div>
-                                                );
-                                            })}
-                                        </div>
-                                    )}
-                                </div>
-                                <p className="car-select-desc">MISSING MODEL?</p>
-                            </div>
-                            <div className="car-filter-by-dropdown">
-                                <div className="car-dropdown">
-                                    <div
-                                        className="car-dropdown-btn"
-                                        onClick={(e) => setIsActiveStatus(!isActiveStatus)}
-                                    >
-                                        {selectedStatus}
-                                        <FontAwesomeIcon
-                                            icon={faCaretDown}
-                                            className="angle-down-icon"
-                                        />
-                                    </div>
-                                    {isActiveStatus && (
-                                        <div className="car-dropdown-content">
-                                            {carModels.map((model, index) => {
-                                                return (
-                                                    <div
-                                                        className="car-dropdown-item"
-                                                        key={index}
-                                                        onClick={(e) => {
-                                                            setSelectedStatus(model);
-                                                            setIsActiveStatus(false);
-                                                        }}
-                                                    >
-                                                        {model}
-                                                    </div>
-                                                );
-                                            })}
-                                        </div>
-                                    )}
-                                </div>
-                                <p className="car-select-desc">E.G: NEW, USED, CERTIFIED?</p>
-                            </div>
-
-                            <div className="car-filter-by-dropdown">
-                                <div className="car-dropdown">
-                                    <div
-                                        className="car-dropdown-btn"
-                                        onClick={(e) => setIsActiveMax(!isActiveMax)}
-                                    >
-                                        {selectedMax}
-                                        <FontAwesomeIcon
-                                            icon={faCaretDown}
-                                            className="angle-down-icon"
-                                        />
-                                    </div>
-                                    {isActiveMax && (
-                                        <div className="car-dropdown-content">
-                                            {carModels.map((model, index) => {
-                                                return (
-                                                    <div
-                                                        className="car-dropdown-item"
-                                                        key={index}
-                                                        onClick={(e) => {
-                                                            setSelectedMax(model);
-                                                            setIsActiveMax(false);
-                                                        }}
-                                                    >
-                                                        {model}
-                                                    </div>
-                                                );
-                                            })}
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
-
-                            <div className="car-filter-by-dropdown">
-                                <div className="car-dropdown">
-                                    <div
-                                        className="car-dropdown-btn"
-                                        onClick={(e) => setIsActiveMin(!isActiveMin)}
-                                    >
-                                        {selectedMin}
-                                        <FontAwesomeIcon
-                                            icon={faCaretDown}
-                                            className="angle-down-icon"
-                                        />
-                                    </div>
-                                    {isActiveMin && (
-                                        <div className="car-dropdown-content">
-                                            {carModels.map((model, index) => {
-                                                return (
-                                                    <div
-                                                        className="car-dropdown-item"
-                                                        key={index}
-                                                        onClick={(e) => {
-                                                            setSelectedMin(model);
-                                                            setIsActiveMin(false);
-                                                        }}
-                                                    >
-                                                        {model}
-                                                    </div>
-                                                );
-                                            })}
-                                        </div>
-                                    )}
-                                </div>
-                            </div>
+                        <div className="dropdown">
+                            <p className="select-desc">Select Model</p>
+                            <Dropdown
+                                placeholder="Model"
+                                clearable
+                                options={options}
+                                selection
+                            />
+                        </div>
+                        <div className="dropdown">
+                            <p className="select-desc">Select Car Condition</p>
+                            <Dropdown
+                                placeholder="Condition"
+                                clearable
+                                options={options}
+                                selection
+                            />
+                        </div>
+                        <div className="dropdown">
+                            <p className="select-desc">Min Year</p>
+                            <Dropdown
+                                placeholder="Min Year"
+                                clearable
+                                options={options}
+                                selection
+                            />
+                        </div>
+                        <div className="dropdown">
+                            <p className="select-desc">Max Year</p>
+                            <Dropdown
+                                placeholder="Max Year"
+                                clearable
+                                options={options}
+                                selection
+                            />
+                        </div>
+                        <div className="price-input">
+                            <input
+                                type="text"
+                                className="min-price car"
+                                value={minPrice}
+                                placeholder="Min range"
+                            />
+                        </div>
+                        <div className="price-input">
+                            <input
+                                type="text"
+                                className="max-price car"
+                                value={maxPrice}
+                                placeholder="Max range"
+                            />
+                        </div>
                         </div>
                         <div className="filter-button">
                             <div className="car-button-search">
@@ -401,6 +313,7 @@ const Cars = () => {
                             </div>
                             <div className="reset-button">Reset All filters</div>
                         </div>
+
                     </div>
                 </div>
             </div>

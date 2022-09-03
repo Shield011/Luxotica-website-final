@@ -205,45 +205,23 @@
     align-content: center
 }
 
-.b-footer .b-nav__logo img {
-    margin: 10px 15px 15px 10px;
-}
 
-.b-footer__company{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-}
-
-.b-footer__company p {
-    font: 600 12px 'Open Sans', sans-serif;
-    margin-left: 43px;
-
-
-
-
-}
 
 
 .location-icon{
     font-size: 19px;
-    margin-right: 6px;
-    margin-bottom: 4px;
+
     color:#F6E6A3 ;
 }
 .phone-icon{
     font-size: 17px;
-    margin-left: 4px;
-    margin-right: 7px;
-    margin-top: 4px;
     margin-bottom: 4px;
     color:#F6E6A3 ;
 }
 
 .mail-icon{
     font-size: 17px;
-    margin: 6px;
+
     color:#F6E6A3 ;
 }
 .b-footer__content {
@@ -276,6 +254,11 @@
 .b-footer__content-nav ul li a {
 font-family: 'Montserrat', sans-serif;
     text-decoration: none;
+
+}
+.address-detail-footer{
+    margin-left: 0px;
+    text-align: left;
 
 }
 
@@ -326,7 +309,7 @@ font-family: 'Montserrat', sans-serif;
     flex-wrap: wrap;
     align-content: stretch;
     align-items: stretch;
-    margin-left: 10px;
+
 }
 
 .contacts-item{
@@ -336,6 +319,8 @@ font-family: 'Montserrat', sans-serif;
     letter-spacing: 2px;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
+    display: flex;
+    gap: 10px;
 
 }
 
@@ -366,6 +351,9 @@ font-family: 'Montserrat', sans-serif;
     list-style: square;
 }
 
+.items{
+    text-align: left;
+}
 .follow-text{
     font-size: 15px;
     margin-top: 7px;
@@ -428,8 +416,8 @@ font-family: 'Montserrat', sans-serif;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: stretch;
-    justify-content: space-evenly;
-    align-items: center;
+    padding: 14px;
+    align-items: flex-start;
 }
 
 .social-icon{
@@ -467,7 +455,7 @@ font-family: 'Montserrat', sans-serif;
     margin-left: 130px;
 }
 
-@media screen and (max-width:1200px){
+@media screen and (max-width:1300px){
     .b-info__aside{
         margin-top: -50px;
     }
@@ -533,14 +521,14 @@ font-family: 'Montserrat', sans-serif;
 
     .footer-contact{
 
-        margin-left: 0px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: stretch;
-        justify-content: space-evenly;
-        margin-right: 20px;
-        align-items: center;
+        margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    margin-right: 20px;
+    align-items: flex-start;
     }
 
     .location-icon{
@@ -548,11 +536,11 @@ font-family: 'Montserrat', sans-serif;
     }
     .contact-item-list{
         display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: space-evenly;
-    align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: stretch;
+        justify-content: space-evenly;
+        align-items: flex-start;
     }
     .not-row-footer{
         display: flex;
