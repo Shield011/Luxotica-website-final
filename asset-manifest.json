@@ -1,22 +1,38 @@
 {
   "files": {
-    "main.css": "/Luxotica-website-final/static/css/main.778586cb.css",
-    "main.js": "/Luxotica-website-final/static/js/main.14792217.js",
-    "static/media/Huracan.png": "/Luxotica-website-final/static/media/Huracan.f7fc482d7ad58e3d1608.png",
-    "static/media/RollsRoyceRight.png": "/Luxotica-website-final/static/media/RollsRoyceRight.b8dda8e273b714a18425.png",
-    "static/media/MercedesBenzE.png": "/Luxotica-website-final/static/media/MercedesBenzE.cc3ba4680bee8413fca7.png",
-    "static/media/phoneTalking.jpg": "/Luxotica-website-final/static/media/phoneTalking.a1b195485ef53a2665bb.jpg",
-    "static/media/MiniCooperRed.png": "/Luxotica-website-final/static/media/MiniCooperRed.81cb1ea497bdbb369217.png",
-    "static/media/carDelivery.jpg": "/Luxotica-website-final/static/media/carDelivery.ead3e3064aad3d829941.jpg",
-    "static/media/carHandover.jpg": "/Luxotica-website-final/static/media/carHandover.7111b9a1b77fdea6aa8b.jpg",
-    "static/media/LuxoticaLogo.png": "/Luxotica-website-final/static/media/LuxoticaLogo.1ab8d6bec5f263ed78ee.png",
-    "static/media/visitingShowroom.jpg": "/Luxotica-website-final/static/media/visitingShowroom.5bd1c7df916b9e53d351.jpg",
+    "main.css": "/Luxotica-website-final/static/css/main.78bc264e.chunk.css",
+    "main.js": "/Luxotica-website-final/static/js/main.1d171f24.chunk.js",
+    "main.js.map": "/Luxotica-website-final/static/js/main.1d171f24.chunk.js.map",
+    "runtime-main.js": "/Luxotica-website-final/static/js/runtime-main.9a18a420.js",
+    "runtime-main.js.map": "/Luxotica-website-final/static/js/runtime-main.9a18a420.js.map",
+    "static/css/2.99c1cb0e.chunk.css": "/Luxotica-website-final/static/css/2.99c1cb0e.chunk.css",
+    "static/js/2.207e3be5.chunk.js": "/Luxotica-website-final/static/js/2.207e3be5.chunk.js",
+    "static/js/2.207e3be5.chunk.js.map": "/Luxotica-website-final/static/js/2.207e3be5.chunk.js.map",
     "index.html": "/Luxotica-website-final/index.html",
-    "main.778586cb.css.map": "/Luxotica-website-final/static/css/main.778586cb.css.map",
-    "main.14792217.js.map": "/Luxotica-website-final/static/js/main.14792217.js.map"
+    "precache-manifest.64778930c691540e8b0e79f65157dcb8.js": "/Luxotica-website-final/precache-manifest.64778930c691540e8b0e79f65157dcb8.js",
+    "service-worker.js": "/Luxotica-website-final/service-worker.js",
+    "static/css/2.99c1cb0e.chunk.css.map": "/Luxotica-website-final/static/css/2.99c1cb0e.chunk.css.map",
+    "static/css/main.78bc264e.chunk.css.map": "/Luxotica-website-final/static/css/main.78bc264e.chunk.css.map",
+    "static/js/2.207e3be5.chunk.js.LICENSE.txt": "/Luxotica-website-final/static/js/2.207e3be5.chunk.js.LICENSE.txt",
+    "static/media/HuracanBlue.png": "/Luxotica-website-final/static/media/HuracanBlue.edce24dc.png",
+    "static/media/LuxoticaLogo.png": "/Luxotica-website-final/static/media/LuxoticaLogo.e4b7138f.png",
+    "static/media/MiniCooperRed.png": "/Luxotica-website-final/static/media/MiniCooperRed.e01e90f1.png",
+    "static/media/App.css": "/Luxotica-website-final/static/media/Unsplash9.be5101e8.jpg",
+    "static/media/semantic.css": "/Luxotica-website-final/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/carDelivery.jpg": "/Luxotica-website-final/static/media/carDelivery.be834c8b.jpg",
+    "static/media/carHandover.jpg": "/Luxotica-website-final/static/media/carHandover.154a87d9.jpg",
+    "static/media/phoneTalking.jpg": "/Luxotica-website-final/static/media/phoneTalking.3c3dde48.jpg",
+    "static/media/slider1.jpg": "/Luxotica-website-final/static/media/slider1.4d629fe9.jpg",
+    "static/media/slider2.jpg": "/Luxotica-website-final/static/media/slider2.3a46b6ef.jpg",
+    "static/media/slider3.jpg": "/Luxotica-website-final/static/media/slider3.3858decb.jpg",
+    "static/media/slider4.jpg": "/Luxotica-website-final/static/media/slider4.f504afc6.jpg",
+    "static/media/visitingShowroom.jpg": "/Luxotica-website-final/static/media/visitingShowroom.7522f5f9.jpg"
   },
   "entrypoints": [
-    "static/css/main.778586cb.css",
-    "static/js/main.14792217.js"
+    "static/js/runtime-main.9a18a420.js",
+    "static/css/2.99c1cb0e.chunk.css",
+    "static/js/2.207e3be5.chunk.js",
+    "static/css/main.78bc264e.chunk.css",
+    "static/js/main.1d171f24.chunk.js"
   ]
 }
