@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Footer from "../../components/Footer/Footer";
 
 const Contact = (e) => {
-    e.preventDefault();
+
 
     const[name, setName] = useState();
     const[email, setEmail] = useState();

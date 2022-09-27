@@ -1,6 +1,7 @@
 {
   "name": "luxotica.ui",
   "version": "0.1.0",
+  "homepage": "https://www.luxotica.in",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
